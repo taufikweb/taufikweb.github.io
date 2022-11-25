@@ -20,7 +20,7 @@ function addToCart(el){
     //  alert(invalue);
     //   window.location = curl;
  // var innerXML = $.get(curl,function(data){
-        $("#iframe").html("<iframe src='"+ curl + "' style='overflow: hidden; display: block; width: 100%; height: 100%;' width='100%' height='100%' frameborder='0' ></iframe>");
+        $("#iframe").html("<iframe src='"+ curl + "' id='widgetv2Api' allowtransparency='true' scrolling='no' style='border:none;' width='100%' loading='auto' height='100%' frameborder='0' allowfullscreen></iframe>");
   //  $("#iframe").html(data);
   //  alert(data);
  // });
@@ -39,26 +39,26 @@ function addToCart(el){
 </script>
 
   </head>
-  <body style="margin: 6;">
+  <body style="margin: 0 auto;">
     
      <!-- Form Input Start -->
-<div class="card">
+<div class="card border-blue-500 px-1 py-1 border-3 bg-base-100 shadow-xl rounded-md">
   <div class="card-header">
     YouTube Downloader
   </div>
 <div class="card-body">
 <input type="text" id="mInput" class="form-control" placeholder="https://m.youtube.com/watch?v=dHlS3emVvAA"/>
-<button id="mBtn" onclick="addToCart(this)" class="btn btn-primary m-2" >Get Mp3</button>
+<button id="mBtn" onclick="addToCart(this)" class="btn btn-primary m-1" >Get Mp3</button>
 </div>
 </div>
-     <div class="card m-1">
-    <div id="iframe" class="card-body">
+     
+    <div id="iframe" class="card-body m-2">
       
-   </div>
    </div>
       <!-- Form input End-->
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.min.js"></script>
+<script>iFrameResize({ log: false, minHeight: 400 }, '#widgetv2Api')</script>
 </body>
 </html>
