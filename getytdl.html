@@ -9,16 +9,16 @@
 
 <script>
   
-  $(document).ready(function(){
-    // Get value on button click and show alert
-    $("#mBtn").click(function(){
-        var str = $("#mInput").val();
-        let curl = "https://convert2mp3s.com/api/widget?url="+str;
-    
- window.location = curl;
-    });
-});
+  
 
+function addToCart(el){
+    var invalue = $("#mInput").val();
+  
+    var curl = "https://convert2mp3s.com/api/widget?url="+invalue;
+    
+    //   alert(invalue);
+       window.location = curl;
+}
 </script>
 
   </head>
@@ -30,9 +30,8 @@
     YouTube Downloader
   </div>
 <div class="card-body">
- <span class="card-title">testing</span>
-<input type="text" id="mInput" class="form-control">
-<button id="mBtn" class="btn btn-primary" >Get Mp3</button>
+<input type="text" id="mInput" class="form-control"/>
+<button id="mBtn" onclick="addToCart(this)" class="btn btn-primary m-2" >Get Mp3</button>
 </div>
 </div>
     
