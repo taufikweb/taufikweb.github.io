@@ -5,6 +5,7 @@
     <style>
     . container {
       justify-content: center;
+      align-items: center;
     }
     </style>
   </head>
@@ -13,15 +14,15 @@
 
 
 function Getty(){
-let get_url = document.getElementById("#main");
+let get_url = document.getElementById("main");
 
  let curl = "https://convert2mp3s.com/api/widget?url="+get_url;
  window.location = curl;
 }
-</script>on
+</script>
 
 <div class="container">
-<input type="text" id="main">
+<input type="text" class="main"/>
 <button id="get" onclick="Getty()">Get</button>
 </div>
 
