@@ -9,15 +9,22 @@
 
 <script>
   
-  
+ 
 
 function addToCart(el){
+  
     var invalue = $("#mInput").val();
   
     var curl = "https://convert2mp3s.com/api/widget?url="+invalue;
     
-    //   alert(invalue);
-       window.location = curl;
+    //  alert(invalue);
+    //   window.location = curl;
+  $.get(curl,function(data){
+    $("#iframe").html(data);
+  //  alert(data);
+  })
+    
+
 }
 </script>
 
@@ -34,7 +41,9 @@ function addToCart(el){
 <button id="mBtn" onclick="addToCart(this)" class="btn btn-primary m-2" >Get Mp3</button>
 </div>
 </div>
-    
+    <div id="iframe">
+      
+   </div>
       <!-- Form input End-->
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
