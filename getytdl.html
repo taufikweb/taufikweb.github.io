@@ -7,20 +7,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
+    
     <script type="JavaScript">
-
-
-function Getty(){
-let get_url = document.getElementById("main");
+  
+  function Getty(){
+   let get_url = document.getElementById("main");
 
  let curl = "https://convert2mp3s.com/api/widget?url="+get_url;
  window.location = curl;
 }
 </script>
 
-<div class="container">
+<div class="form-group">
 <input type="text" class="main form-control">
-<button id="get" class="btn btn-primary" onclick="Getty()">Get</button>
+<button class="btn btn-primary" onclick="Getty()">Get</button>
 </div>
 
 </body>
