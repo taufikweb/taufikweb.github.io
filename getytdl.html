@@ -1,6 +1,20 @@
 
 
+<html>
+  <body>
+    <script>
 
-function Getty(url){
 
- let curl = https://convert2mp3s.com/api/widget?url="+url;
+function Getty(){
+let get_url = document.getElementById("main");
+
+ let curl = "https://convert2mp3s.com/api/widget?url="+get_url;
+ window.location = curl;
+}
+</script>
+<div class="container">
+<input type="text" id="main">
+<button id="get" onclick="Getty()">Get</button>
+</div>
+</body>
+</html>
