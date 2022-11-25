@@ -3,25 +3,41 @@
 <html>
   <head>
     <title>YouTube Downloader</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
   </head>
-  <body>
+  <body style="margin: 6;">
     
-    <script type="JavaScript">
-  
-  function Getty(){
-   let get_url = document.getElementById("main");
-
- let curl = "https://convert2mp3s.com/api/widget?url="+get_url;
- window.location = curl;
-}
-</script>
-
-<div class="form-group">
-<input type="text" class="main form-control">
-<button class="btn btn-primary" onclick="Getty()">Get</button>
+     <!-- Form Input Start -->
+<div class="card">
+  <div class="card-header">
+    YouTube Downloader
+  </div>
+<div class="card-body">
+<input type="text" id="mInput" class="form-control">
+<button id="mBtn" class="btn btn-primary" >Get Mp3</button>
 </div>
+</div>
+    
+      <!-- Form input End-->
+<script>
+  
+  $(document).ready(function(){
+    // Get value on button click and show alert
+    $("#mBtn").click(function(){
+        var str = $("#mInput").val();
+        let curl = "https://convert2mp3s.com/api/widget?url="+str;
+    
+ window.location = curl;
+    });
+});
+
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
 </body>
 </html>
