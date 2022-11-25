@@ -12,10 +12,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
- 
-
+ /*
+window.onload = function(){
+   
+$.getJSON("https://raw.githubusercontent.com/taufikweb/taufikweb.github.io/main/check_update.json",function(data){
+  if(data.update===true){
+    alert("Update tersedia!\n\nVersi: "+data.build_version+"\nName: "+data.name);
+  }
+  }).done(function(data){
+    
+    data.update = false;
+    
+  });
+  
+  };
+  */
 function addToCart(el){
   
+
     var invalue = $("#mInput").val();
   
     var curl = "https://convert2mp3s.com/api/widget?url="+invalue;
