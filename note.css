@@ -27,13 +27,13 @@
 
 /* dengan tepi tumpul */
 
-.note.rounded {
+.note.rdd {
   -webkit-border-radius:5px 0 5px 5px;
   -moz-border-radius:5px 0 5px 5px;
   border-radius:5px 0 5px 5px;
 }
 
-.note.rounded:before {
+.note.rdd:before {
   border-width:8px;
   border-color:white white transparent transparent;
   -webkit-border-radius:0 0 0 5px;
