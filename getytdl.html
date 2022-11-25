@@ -7,7 +7,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<script>
+  
+  $(document).ready(function(){
+    // Get value on button click and show alert
+    $("#mBtn").click(function(){
+        var str = $("#mInput").val();
+        let curl = "https://convert2mp3s.com/api/widget?url="+str;
+    
+ window.location = curl;
+    });
+});
 
+</script>
 
   </head>
   <body style="margin: 6;">
@@ -24,19 +36,7 @@
 </div>
     
       <!-- Form input End-->
-<script>
-  
-  $(document).ready(function(){
-    // Get value on button click and show alert
-    $("#mBtn").click(function(){
-        var str = $("#mInput").val();
-        let curl = "https://convert2mp3s.com/api/widget?url="+str;
-    
- window.location = curl;
-    });
-});
 
-</script>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
 </body>
