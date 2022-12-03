@@ -31,7 +31,12 @@ function addToCart(el){
   
 
     var invalue = $("#mInput").val();
-  
+
+    if(invalue==""){
+        $(".alert").show();
+     }else{
+         $(".alert").hide();
+     }
     var curl = "https://convert2mp3s.com/api/widget?url="+invalue;
     
     //  alert(invalue);
@@ -74,7 +79,9 @@ script.onload = function () {
   <div class="card-header bg-primary shadow">
     YouTube Downloader
   </div>
-
+<div class="alert alert-warning d-none" role="alert">
+  A simple warning alert—check it out!
+</div>
 <div style="text-align:center;" class="card-body">
 <input type="text" id="mInput" class="form-control shadow-sm" placeholder="https://m.youtube.com/watch?v=dHlS3emVvAA"/>
 <button id="mBtn" onclick="addToCart(this)" class="btn btn-primary m-1 shadow-sm" >Convert</button>
